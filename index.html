@@ -182,7 +182,13 @@
             <p class="text-xl mb-12 text-zinc-300">Ready to bring magic to your next event? Let’s talk!</p>
             
             <div class="bg-zinc-900 rounded-3xl p-8 md:p-12 mb-12 border border-zinc-800">
-                <form name="contact" method="POST" data-netlify="true" class="space-y-5 text-left">
+                <form action="https://formsubmit.co/info@emergencymagician.com" method="POST" class="space-y-5 text-left">
+                    <!-- FormSubmit settings -->
+                    <input type="hidden" name="_subject" value="New Booking Inquiry – The Emergency Magician">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="https://emergencymagician.com/#contact">
+                    
                     <div>
                         <input type="text" name="name" placeholder="Your Name" required 
                                class="w-full bg-zinc-800 border border-zinc-700 rounded-xl px-6 py-4 focus:outline-none focus:border-amber-400 transition">
@@ -215,7 +221,7 @@
                     <i class="fa-solid fa-phone text-2xl text-amber-400"></i>
                     <span>(951) 236-6282</span>
                 </a>
-                <a href="https://urldefense.com/v3/__https://www.instagram.com/emergencymagician/__;!!BZ50a36bapWJ!qP7v4P182Bz8w5_dsP_7pTxPIuLttv3q9FtuVVw8gXQKYNT_52mgUMnLuEr4qNxGLFc8z589YrXKHXtoLNu-D6dB9g$" target="_blank" rel="noopener" class="flex items-center gap-3 hover:text-amber-400 transition">
+                <a href="https://www.instagram.com/emergencymagician/" target="_blank" rel="noopener" class="flex items-center gap-3 hover:text-amber-400 transition">
                     <i class="fa-brands fa-instagram text-3xl text-amber-400"></i>
                     <span>@emergencymagician</span>
                 </a>
