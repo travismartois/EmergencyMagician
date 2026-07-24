@@ -11,13 +11,6 @@
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap');
         body { font-family: 'Inter', system-ui, sans-serif; }
         .heading { font-family: 'Playfair Display', serif; }
-        .hero-bg {
-            background-image: linear-gradient(rgba(0,0,0,0.70), rgba(0,0,0,0.75)), 
-                              url('https://emergencymagician.com/wp-content/uploads/2025/08/23E65E6A-2C05-431C-8237-FA6900C9B934-3-scaled.jpg');
-            background-size: cover;
-            background-position: center top;
-            background-repeat: no-repeat;
-        }
         .card-hover:hover { 
             transform: translateY(-8px); 
             transition: all 0.3s ease;
@@ -29,6 +22,7 @@
             height: 0;
             overflow: hidden;
             border-radius: 1rem;
+            background: #18181b;
         }
         .video-container iframe {
             position: absolute;
@@ -37,12 +31,15 @@
             width: 100%;
             height: 100%;
         }
+        .hero-gradient {
+            background: linear-gradient(135deg, #0c0a09 0%, #1c1917 40%, #292524 100%);
+        }
     </style>
 </head>
 <body class="bg-zinc-950 text-zinc-100">
 
     <!-- Navbar -->
-    <nav class="fixed top-0 w-full bg-black/85 backdrop-blur-md z-50 border-b border-amber-500/30">
+    <nav class="fixed top-0 w-full bg-black/90 backdrop-blur-md z-50 border-b border-amber-500/30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
             <div class="flex items-center gap-3">
                 <div class="w-10 h-10 bg-amber-500 rounded-full flex items-center justify-center text-black font-bold text-lg">EM</div>
@@ -60,17 +57,18 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-bg min-h-screen flex items-center justify-center text-center pt-20 pb-16">
+    <section class="hero-gradient min-h-screen flex items-center justify-center text-center pt-24 pb-16 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 30% 20%, #f59e0b 0%, transparent 40%), radial-gradient(circle at 70% 80%, #7c3aed 0%, transparent 40%);"></div>
         <div class="max-w-4xl px-6 relative z-10">
             <h1 class="text-5xl sm:text-6xl md:text-7xl heading font-bold mb-4 tracking-tighter text-white drop-shadow-lg">TRAVIS MARTOIS</h1>
-            <p class="text-3xl sm:text-4xl md:text-5xl heading text-amber-400 mb-6 drop-shadow">The Emergency Magician</p>
-            <p class="text-lg sm:text-xl max-w-2xl mx-auto mb-10 text-zinc-200 leading-relaxed">
-                Award-winning close-up magic &amp; stage illusions.<br>
+            <p class="text-3xl sm:text-4xl md:text-5xl heading text-amber-400 mb-6">The Emergency Magician</p>
+            <p class="text-lg sm:text-xl max-w-2xl mx-auto mb-8 text-zinc-200 leading-relaxed">
+                Award-winning close-up magic &amp; stage illusions.<br class="hidden sm:block">
                 Senior center shows • School shows • Corporate events • Weddings &amp; private shows
             </p>
-            <p class="text-amber-300 font-medium mb-10 text-lg">MAGIC IS MEDICINE</p>
+            <p class="text-amber-300 font-medium mb-10 text-lg tracking-wide">MAGIC IS MEDICINE</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#contact" class="bg-amber-500 hover:bg-amber-400 text-black px-10 py-4 rounded-full text-lg font-semibold inline-block shadow-lg">Book Your Event</a>
+                <a href="#contact" class="bg-amber-500 hover:bg-amber-400 text-black px-10 py-4 rounded-full text-lg font-semibold inline-block shadow-lg shadow-amber-500/20">Book Your Event</a>
                 <a href="#gallery" class="border-2 border-amber-400 hover:bg-white/10 px-10 py-4 rounded-full text-lg font-semibold inline-block">See Performances</a>
             </div>
         </div>
@@ -78,21 +76,12 @@
 
     <!-- About Section -->
     <section id="about" class="py-20 md:py-28 bg-zinc-900">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
-                <div>
-                    <h2 class="text-4xl md:text-5xl heading font-bold mb-8">Who Is The Emergency Magician?</h2>
-                    <div class="space-y-5 text-lg text-zinc-300 leading-relaxed">
-                        <p>Travis Martois is a proud member of The Academy of Magical Arts at the World Famous Magic Castle in Hollywood and The Magic Circle in London. He has been a Featured performer in the Close-Up Gallery at the Magic Castle.</p>
-                        <p>By day, he is a Physician Assistant with over 35 years in emergency medicine — starting as an EMT at age 19. By night, he brings magic that heals the soul.</p>
-                        <p class="text-amber-400 font-semibold text-xl mt-6">MAGIC IS MEDICINE.</p>
-                    </div>
-                </div>
-                <div class="rounded-2xl overflow-hidden border border-amber-500/30 shadow-2xl">
-                    <img src="https://emergencymagician.com/wp-content/uploads/2025/08/23E65E6A-2C05-431C-8237-FA6900C9B934-3-scaled.jpg" 
-                         alt="Travis Martois - The Emergency Magician" 
-                         class="w-full h-auto object-cover">
-                </div>
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-5xl heading font-bold mb-10">Who Is The Emergency Magician?</h2>
+            <div class="space-y-6 text-lg text-zinc-300 leading-relaxed max-w-3xl mx-auto">
+                <p>Travis Martois is a proud member of The Academy of Magical Arts at the World Famous Magic Castle in Hollywood and The Magic Circle in London. He has been a Featured performer in the Close-Up Gallery at the Magic Castle.</p>
+                <p>By day, he is a Physician Assistant with over 35 years in emergency medicine — starting as an EMT at age 19. By night, he brings magic that heals the soul.</p>
+                <p class="text-amber-400 font-semibold text-2xl mt-8">MAGIC IS MEDICINE.</p>
             </div>
         </div>
     </section>
@@ -145,19 +134,29 @@
             <p class="text-center text-amber-400 mb-12">Watch Travis perform • More on Instagram @emergencymagician</p>
             
             <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                <div class="video-container border border-amber-500/20 shadow-xl">
-                    <iframe src="https://www.youtube.com/embed/0cPmkiXV0VY" 
-                            title="Travis Martois Performance" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen></iframe>
+                <!-- Reel -->
+                <div>
+                    <h3 class="text-xl heading mb-4 text-center text-amber-300">Performance Reel</h3>
+                    <div class="video-container border border-amber-500/20 shadow-xl">
+                        <iframe src="https://www.youtube.com/embed/i6qcdF50jA0" 
+                                title="Travis Martois Performance Reel" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen
+                                referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    </div>
                 </div>
-                <div class="video-container border border-amber-500/20 shadow-xl">
-                    <iframe src="https://www.youtube.com/embed/i6qcdF50jA0" 
-                            title="Travis Martois Magic" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen></iframe>
+                <!-- Longer video -->
+                <div>
+                    <h3 class="text-xl heading mb-4 text-center text-amber-300">Full Performance</h3>
+                    <div class="video-container border border-amber-500/20 shadow-xl">
+                        <iframe src="https://www.youtube.com/embed/Jyr8P1eNGF0" 
+                                title="Travis Martois Full Performance" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen
+                                referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    </div>
                 </div>
             </div>
         </div>
@@ -216,7 +215,7 @@
                     <i class="fa-solid fa-phone text-2xl text-amber-400"></i>
                     <span>(951) 236-6282</span>
                 </a>
-                <a href="https://urldefense.com/v3/__https://www.instagram.com/emergencymagician/__;!!BZ50a36bapWJ!t9PiWM1mWjtB0U3sIDns-f8wonjero7ucxn4YgPmIPqT_F0RU3oPJvJrG_Oy0suElzs8ZLUHNfEwZVMAy63R6e_4LA$" target="_blank" rel="noopener" class="flex items-center gap-3 hover:text-amber-400 transition">
+                <a href="https://urldefense.com/v3/__https://www.instagram.com/emergencymagician/__;!!BZ50a36bapWJ!qP7v4P182Bz8w5_dsP_7pTxPIuLttv3q9FtuVVw8gXQKYNT_52mgUMnLuEr4qNxGLFc8z589YrXKHXtoLNu-D6dB9g$" target="_blank" rel="noopener" class="flex items-center gap-3 hover:text-amber-400 transition">
                     <i class="fa-brands fa-instagram text-3xl text-amber-400"></i>
                     <span>@emergencymagician</span>
                 </a>
