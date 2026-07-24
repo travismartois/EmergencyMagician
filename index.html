@@ -4,184 +4,231 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Emergency Magician | Travis Martois</title>
+    <meta name="description" content="Award-winning close-up magic & stage illusions. Senior center shows, school shows, corporate events, weddings & private shows by Travis Martois – The Emergency Magician.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;600&display=swap');
-        body { font-family: 'Inter', system_ui, sans-serif; }
-        .heading { font-family: 'Playfair Display', sans-serif; }
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap');
+        body { font-family: 'Inter', system-ui, sans-serif; }
+        .heading { font-family: 'Playfair Display', serif; }
         .hero-bg {
-            background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('http://emergencymagician.com/wp-content/uploads/2025/08/23E65E6A-2C05-431C-8237-FA6900C9B934-3-scaled.jpg');
+            background-image: linear-gradient(rgba(0,0,0,0.70), rgba(0,0,0,0.75)), 
+                              url('https://emergencymagician.com/wp-content/uploads/2025/08/23E65E6A-2C05-431C-8237-FA6900C9B934-3-scaled.jpg');
             background-size: cover;
-            background-position: center;
+            background-position: center top;
+            background-repeat: no-repeat;
         }
-        .card-hover:hover { transform: translateY(-10px); transition: all 0.3s; }
+        .card-hover:hover { 
+            transform: translateY(-8px); 
+            transition: all 0.3s ease;
+            border-color: rgba(245, 158, 11, 0.5);
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 1rem;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
     </style>
 </head>
 <body class="bg-zinc-950 text-zinc-100">
+
     <!-- Navbar -->
-    <nav class="fixed top-0 w-full bg-black/80 backdrop-blur-md z-50 border-b border-amber-500/30">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <nav class="fixed top-0 w-full bg-black/85 backdrop-blur-md z-50 border-b border-amber-500/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-amber-500 rounded-full flex items-center justify-center text-black font-bold text-xl">EM</div>
-                <span class="text-2xl font-bold heading tracking-tight">The Emergency Magician</span>
+                <div class="w-10 h-10 bg-amber-500 rounded-full flex items-center justify-center text-black font-bold text-lg">EM</div>
+                <span class="text-xl sm:text-2xl font-bold heading tracking-tight">The Emergency Magician</span>
             </div>
-            <div class="hidden md:flex gap-8 text-sm uppercase tracking-widest">
+            <div class="hidden md:flex gap-7 text-sm uppercase tracking-widest">
                 <a href="#about" class="hover:text-amber-400 transition">About</a>
                 <a href="#services" class="hover:text-amber-400 transition">Services</a>
                 <a href="#gallery" class="hover:text-amber-400 transition">Gallery</a>
                 <a href="#testimonials" class="hover:text-amber-400 transition">Testimonials</a>
                 <a href="#contact" class="hover:text-amber-400 transition">Contact</a>
             </div>
-            <a href="#contact" class="bg-amber-500 hover:bg-amber-400 text-black px-6 py-2 rounded-full font-semibold transition">Book Now</a>
+            <a href="#contact" class="bg-amber-500 hover:bg-amber-400 text-black px-5 py-2 rounded-full font-semibold text-sm transition">Book Now</a>
         </div>
     </nav>
 
-    <!-- Hero -->
-    <section class="hero-bg h-screen flex items-center justify-center text-center pt-20">
-        <div class="max-w-4xl px-6">
-            <h1 class="text-6xl md:text-7xl heading font-bold mb-6 tracking-tighter">TRAVIS MARTOIS</h1>
-            <p class="text-4xl md:text-5xl heading text-amber-400 mb-8">The Emergency Magician</p>
-            <p class="text-xl md:text-2xl max-w-2xl mx-auto mb-12">MAGIC IS MEDICINE. Professional magician &amp; Emergency Medicine Physician Assistant delivering unforgettable experiences.</p>
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center justify-center text-center pt-20 pb-16">
+        <div class="max-w-4xl px-6 relative z-10">
+            <h1 class="text-5xl sm:text-6xl md:text-7xl heading font-bold mb-4 tracking-tighter text-white drop-shadow-lg">TRAVIS MARTOIS</h1>
+            <p class="text-3xl sm:text-4xl md:text-5xl heading text-amber-400 mb-6 drop-shadow">The Emergency Magician</p>
+            <p class="text-lg sm:text-xl max-w-2xl mx-auto mb-10 text-zinc-200 leading-relaxed">
+                Award-winning close-up magic &amp; stage illusions.<br>
+                Senior center shows • School shows • Corporate events • Weddings &amp; private shows
+            </p>
+            <p class="text-amber-300 font-medium mb-10 text-lg">MAGIC IS MEDICINE</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#contact" class="bg-amber-500 hover:bg-amber-400 text-black px-10 py-4 rounded-full text-lg font-semibold inline-block">Book Your Event</a>
-                <a href="#services" class="border border-amber-400 hover:bg-white/10 px-10 py-4 rounded-full text-lg font-semibold inline-block">See Performances</a>
+                <a href="#contact" class="bg-amber-500 hover:bg-amber-400 text-black px-10 py-4 rounded-full text-lg font-semibold inline-block shadow-lg">Book Your Event</a>
+                <a href="#gallery" class="border-2 border-amber-400 hover:bg-white/10 px-10 py-4 rounded-full text-lg font-semibold inline-block">See Performances</a>
             </div>
         </div>
     </section>
 
-    <!-- About -->
-    <section id="about" class="py-24 bg-zinc-900">
+    <!-- About Section -->
+    <section id="about" class="py-20 md:py-28 bg-zinc-900">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
                 <div>
-                    <h2 class="text-5xl heading font-bold mb-8">Who Is The Emergency Magician?</h2>
-                    <div class="prose prose-invert max-w-none text-lg">
-                        <p>Travis Martois is a proud member of The Academy of Magical Arts at the World Famous Magic Castle in Hollywood and The Magic Circle in London. Featured in the Close-Up Gallery at the Magic Castle.</p>
-                        <p>By day, he's a Physician Assistant with over 35 years in emergency medicine — starting as an EMT at 19. By night, he brings magic that heals the soul.</p>
-                        <p><strong>MAGIC IS MEDICINE.</strong></p>
+                    <h2 class="text-4xl md:text-5xl heading font-bold mb-8">Who Is The Emergency Magician?</h2>
+                    <div class="space-y-5 text-lg text-zinc-300 leading-relaxed">
+                        <p>Travis Martois is a proud member of The Academy of Magical Arts at the World Famous Magic Castle in Hollywood and The Magic Circle in London. He has been a Featured performer in the Close-Up Gallery at the Magic Castle.</p>
+                        <p>By day, he is a Physician Assistant with over 35 years in emergency medicine — starting as an EMT at age 19. By night, he brings magic that heals the soul.</p>
+                        <p class="text-amber-400 font-semibold text-xl mt-6">MAGIC IS MEDICINE.</p>
                     </div>
                 </div>
-                <div class="rounded-2xl overflow-hidden border border-amber-500/30">
-                    <img src="https://picsum.photos/id/64/800/600" alt="Travis Martois" class="w-full">
+                <div class="rounded-2xl overflow-hidden border border-amber-500/30 shadow-2xl">
+                    <img src="https://emergencymagician.com/wp-content/uploads/2025/08/23E65E6A-2C05-431C-8237-FA6900C9B934-3-scaled.jpg" 
+                         alt="Travis Martois - The Emergency Magician" 
+                         class="w-full h-auto object-cover">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services -->
-    <section id="services" class="py-24">
+    <!-- Services Section -->
+    <section id="services" class="py-20 md:py-28">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-5xl heading font-bold text-center mb-16">Magical Experiences</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Close-Up -->
+            <h2 class="text-4xl md:text-5xl heading font-bold text-center mb-6">Magical Experiences</h2>
+            <p class="text-center text-zinc-400 mb-16 max-w-2xl mx-auto">From intimate close-up magic to full stage productions — tailored for every audience.</p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
                 <div class="bg-zinc-900 p-8 rounded-3xl card-hover border border-amber-500/20">
-                    <div class="text-4xl mb-6">🔍</div>
-                    <h3 class="text-3xl heading mb-4">Close-Up Magic</h3>
-                    <p class="text-zinc-400">Intimate magic inches from your guests. Bring the Magic Castle experience to your table.</p>
+                    <div class="text-4xl mb-5">🔍</div>
+                    <h3 class="text-2xl heading mb-3">Close-Up Magic</h3>
+                    <p class="text-zinc-400 leading-relaxed">Intimate magic inches from your guests. Bring the Magic Castle experience right to your table.</p>
                 </div>
-                <!-- Strolling -->
                 <div class="bg-zinc-900 p-8 rounded-3xl card-hover border border-amber-500/20">
-                    <div class="text-4xl mb-6">🚶</div>
-                    <h3 class="text-3xl heading mb-4">Strolling Magic</h3>
-                    <p class="text-zinc-400">Table-to-table entertainment perfect for weddings, corporate events, and parties.</p>
+                    <div class="text-4xl mb-5">🚶</div>
+                    <h3 class="text-2xl heading mb-3">Strolling Magic</h3>
+                    <p class="text-zinc-400 leading-relaxed">Table-to-table entertainment perfect for weddings, corporate events, and private parties.</p>
                 </div>
-                <!-- Stage -->
                 <div class="bg-zinc-900 p-8 rounded-3xl card-hover border border-amber-500/20">
-                    <div class="text-4xl mb-6">🎭</div>
-                    <h3 class="text-3xl heading mb-4">Stage Shows</h3>
-                    <p class="text-zinc-400">Full-scale productions and custom shows. Experience world-class illusion.</p>
+                    <div class="text-4xl mb-5">🎭</div>
+                    <h3 class="text-2xl heading mb-3">Stage Shows</h3>
+                    <p class="text-zinc-400 leading-relaxed">Full-scale productions and custom shows. Experience world-class illusion and entertainment.</p>
                 </div>
-                <!-- Seniors -->
                 <div class="bg-zinc-900 p-8 rounded-3xl card-hover border border-amber-500/20">
-                    <div class="text-4xl mb-6">👵</div>
-                    <h3 class="text-3xl heading mb-4">Senior Centers</h3>
-                    <p class="text-zinc-400">Joyful, interactive shows designed for seniors. Budget-friendly and heartwarming.</p>
+                    <div class="text-4xl mb-5">👵</div>
+                    <h3 class="text-2xl heading mb-3">Senior Centers</h3>
+                    <p class="text-zinc-400 leading-relaxed">Joyful, interactive shows designed especially for seniors. Budget-friendly and heartwarming.</p>
                 </div>
-                <!-- Private -->
                 <div class="bg-zinc-900 p-8 rounded-3xl card-hover border border-amber-500/20">
-                    <div class="text-4xl mb-6">🎉</div>
-                    <h3 class="text-3xl heading mb-4">Private Events</h3>
-                    <p class="text-zinc-400">Tailored magic for any occasion. I can also recommend other top magicians.</p>
+                    <div class="text-4xl mb-5">🏫</div>
+                    <h3 class="text-2xl heading mb-3">School Shows</h3>
+                    <p class="text-zinc-400 leading-relaxed">Engaging educational and entertainment magic shows for schools of all ages.</p>
                 </div>
-                <!-- Street -->
                 <div class="bg-zinc-900 p-8 rounded-3xl card-hover border border-amber-500/20">
-                    <div class="text-4xl mb-6">🌆</div>
-                    <h3 class="text-3xl heading mb-4">Street &amp; Festival Magic</h3>
-                    <p class="text-zinc-400">High-energy performances including fire eating for festivals and public events.</p>
+                    <div class="text-4xl mb-5">🎉</div>
+                    <h3 class="text-2xl heading mb-3">Private Events &amp; Weddings</h3>
+                    <p class="text-zinc-400 leading-relaxed">Tailored magic for any special occasion. Corporate events, parties, and celebrations.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Gallery / Testimonials combined placeholder -->
-    <section id="gallery" class="py-24 bg-zinc-900">
+    <!-- Gallery / Videos Section -->
+    <section id="gallery" class="py-20 md:py-28 bg-zinc-900">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-5xl heading font-bold text-center mb-16">Magic in Action</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <img src="https://picsum.photos/id/201/600/400" class="rounded-2xl aspect-video object-cover" alt="Magic performance">
-                <img src="https://picsum.photos/id/237/600/400" class="rounded-2xl aspect-video object-cover" alt="Magic performance">
-                <img src="https://picsum.photos/id/180/600/400" class="rounded-2xl aspect-video object-cover" alt="Magic performance">
-                <img src="https://picsum.photos/id/1016/600/400" class="rounded-2xl aspect-video object-cover" alt="Magic performance">
+            <h2 class="text-4xl md:text-5xl heading font-bold text-center mb-6">Magic in Action</h2>
+            <p class="text-center text-amber-400 mb-12">Watch Travis perform • More on Instagram @emergencymagician</p>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="video-container border border-amber-500/20 shadow-xl">
+                    <iframe src="https://www.youtube.com/embed/0cPmkiXV0VY" 
+                            title="Travis Martois Performance" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen></iframe>
+                </div>
+                <div class="video-container border border-amber-500/20 shadow-xl">
+                    <iframe src="https://www.youtube.com/embed/i6qcdF50jA0" 
+                            title="Travis Martois Magic" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen></iframe>
+                </div>
             </div>
-            <p class="text-center mt-8 text-amber-400">More photos &amp; videos on Instagram @emergencymagician</p>
         </div>
     </section>
 
     <!-- Testimonials -->
-    <section id="testimonials" class="py-24">
-        <div class="max-w-4xl mx-auto px-6">
-            <h2 class="text-5xl heading font-bold text-center mb-16">What Clients Say</h2>
-            <div class="space-y-12">
-                <div class="bg-zinc-900 p-10 rounded-3xl italic">"Travis’s performance was the highlight of our evening! His magic left everyone in awe."</div>
-                <p class="text-right text-amber-400">- Jessica L.</p>
-                <!-- Add more as needed -->
+    <section id="testimonials" class="py-20 md:py-28">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-5xl heading font-bold mb-16">What Clients Say</h2>
+            <div class="bg-zinc-900 p-10 md:p-12 rounded-3xl border border-amber-500/20">
+                <p class="italic text-xl md:text-2xl text-zinc-200 leading-relaxed mb-8">
+                    “Travis’s performance was the highlight of our evening! His magic left everyone in awe and talking about it for days.”
+                </p>
+                <p class="text-amber-400 font-medium text-lg">— Jessica L.</p>
             </div>
         </div>
     </section>
 
-    <!-- Contact / Booking -->
-    <section id="contact" class="py-24 bg-black">
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 md:py-28 bg-black">
         <div class="max-w-3xl mx-auto px-6 text-center">
-            <h2 class="text-5xl heading font-bold mb-8">Make Your Event Unforgettable</h2>
-            <p class="text-2xl mb-12">Ready to bring magic to your next event? Let's talk!</p>
+            <h2 class="text-4xl md:text-5xl heading font-bold mb-6">Make Your Event Unforgettable</h2>
+            <p class="text-xl mb-12 text-zinc-300">Ready to bring magic to your next event? Let’s talk!</p>
             
-            <div class="bg-zinc-900 rounded-3xl p-12">
-                <form id="contactForm" class="space-y-6">
-                    <input type="text" placeholder="Your Name" class="w-full bg-zinc-800 border border-zinc-700 rounded-xl px-6 py-4 focus:outline-none focus:border-amber-400">
-                    <input type="email" placeholder="Email Address" class="w-full bg-zinc-800 border border-zinc-700 rounded-xl px-6 py-4 focus:outline-none focus:border-amber-400">
-                    <input type="tel" placeholder="Phone" class="w-full bg-zinc-800 border border-zinc-700 rounded-xl px-6 py-4 focus:outline-none focus:border-amber-400">
-                    <textarea placeholder="Event details (date, type, location, etc.)" rows="5" class="w-full bg-zinc-800 border border-zinc-700 rounded-xl px-6 py-4 focus:outline-none focus:border-amber-400"></textarea>
-                    <button type="submit" class="w-full bg-amber-500 hover:bg-amber-400 text-black py-5 rounded-2xl font-bold text-lg">Send Inquiry – I'll Reply Within 24 Hours</button>
+            <div class="bg-zinc-900 rounded-3xl p-8 md:p-12 mb-12 border border-zinc-800">
+                <form name="contact" method="POST" data-netlify="true" class="space-y-5 text-left">
+                    <div>
+                        <input type="text" name="name" placeholder="Your Name" required 
+                               class="w-full bg-zinc-800 border border-zinc-700 rounded-xl px-6 py-4 focus:outline-none focus:border-amber-400 transition">
+                    </div>
+                    <div>
+                        <input type="email" name="email" placeholder="Email Address" required 
+                               class="w-full bg-zinc-800 border border-zinc-700 rounded-xl px-6 py-4 focus:outline-none focus:border-amber-400 transition">
+                    </div>
+                    <div>
+                        <input type="tel" name="phone" placeholder="Phone Number" 
+                               class="w-full bg-zinc-800 border border-zinc-700 rounded-xl px-6 py-4 focus:outline-none focus:border-amber-400 transition">
+                    </div>
+                    <div>
+                        <textarea name="message" placeholder="Event details (date, type of event, location, number of guests, etc.)" rows="5" required
+                                  class="w-full bg-zinc-800 border border-zinc-700 rounded-xl px-6 py-4 focus:outline-none focus:border-amber-400 transition"></textarea>
+                    </div>
+                    <button type="submit" 
+                            class="w-full bg-amber-500 hover:bg-amber-400 text-black py-5 rounded-2xl font-bold text-lg transition shadow-lg">
+                        Send Inquiry – I’ll Reply Within 24 Hours
+                    </button>
                 </form>
             </div>
             
-            <div class="mt-12 flex flex-col md:flex-row gap-8 justify-center items-center">
-                <a href="mailto:info@emergencymagician.com" class="flex items-center gap-3 hover:text-amber-400">
-                    <i class="fa-solid fa-envelope text-2xl"></i>
+            <div class="flex flex-col sm:flex-row gap-6 sm:gap-10 justify-center items-center text-lg">
+                <a href="mailto:info@emergencymagician.com" class="flex items-center gap-3 hover:text-amber-400 transition">
+                    <i class="fa-solid fa-envelope text-2xl text-amber-400"></i>
                     <span>info@emergencymagician.com</span>
                 </a>
-                <a href="https://www.instagram.com/emergencymagician/" target="_blank" class="flex items-center gap-3 hover:text-amber-400">
-                    <i class="fa-brands fa-instagram text-3xl"></i>
+                <a href="tel:+19512366282" class="flex items-center gap-3 hover:text-amber-400 transition">
+                    <i class="fa-solid fa-phone text-2xl text-amber-400"></i>
+                    <span>(951) 236-6282</span>
+                </a>
+                <a href="https://urldefense.com/v3/__https://www.instagram.com/emergencymagician/__;!!BZ50a36bapWJ!t9PiWM1mWjtB0U3sIDns-f8wonjero7ucxn4YgPmIPqT_F0RU3oPJvJrG_Oy0suElzs8ZLUHNfEwZVMAy63R6e_4LA$" target="_blank" rel="noopener" class="flex items-center gap-3 hover:text-amber-400 transition">
+                    <i class="fa-brands fa-instagram text-3xl text-amber-400"></i>
                     <span>@emergencymagician</span>
                 </a>
             </div>
         </div>
     </section>
 
-    <footer class="bg-black py-12 border-t border-zinc-800 text-center text-sm text-zinc-500">
-        <p>&copy; 2026 The Emergency Magician • Travis Martois • All Rights Reserved</p>
-        <p class="mt-2">Member of The Magic Castle &amp; The Magic Circle</p>
+    <!-- Footer -->
+    <footer class="bg-black py-10 border-t border-zinc-800 text-center text-sm text-zinc-500">
+        <p class="mb-2">&copy; 2026 The Emergency Magician • Travis Martois • All Rights Reserved</p>
+        <p>Member of The Magic Castle (Academy of Magical Arts) &amp; The Magic Circle</p>
     </footer>
 
-    <script>
-        // Simple form submission alert
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert("Thank you! Travis will get back to you soon. 🎩");
-        });
-        
-        // Tailwind script already loaded
-    </script>
 </body>
 </html>
