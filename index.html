@@ -1,57 +1,276 @@
-EM
-The Emergency Magician
-About Services Gallery Testimonials Contact
-Book Now
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Emergency Magician | Travis Martois</title>
+    <meta name="description" content="Award-winning close-up magic & stage illusions. Senior center shows, school shows, corporate events, weddings & private shows by Travis Martois – The Emergency Magician.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap');
+        body { font-family: 'Inter', system-ui, sans-serif; }
+        .heading { font-family: 'Playfair Display', serif; }
+        .card-hover:hover { 
+            transform: translateY(-8px); 
+            transition: all 0.3s ease;
+            border-color: rgba(245, 158, 11, 0.5);
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 1rem;
+            background: #18181b;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #0c0a09 0%, #1c1917 40%, #292524 100%);
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-zinc-100">
 
-￼
-TRAVIS MARTOIS
-The Emergency Magician
-Award-winning close-up magic & stage illusions. Senior center shows • School shows • Corporate events • Weddings & private shows
-MAGIC IS MEDICINE
-Book Your Event See Performances
-￼
-Who Is The Emergency Magician?
-Travis Martois is a proud member of The Academy of Magical Arts at the World Famous Magic Castle in Hollywood and The Magic Circle in London. He has been a Featured performer in the Close-Up Gallery at the Magic Castle.
-By day, he is a Physician Assistant with over 35 years in emergency medicine — starting as an EMT at age 19. By night, he brings magic that heals the soul.
-MAGIC IS MEDICINE.
-Magical Experiences
-From intimate close-up magic to full stage productions — tailored for every audience.
-🔍
-Close-Up Magic
-Intimate magic inches from your guests. Bring the Magic Castle experience right to your table.
-🚶
-Strolling Magic
-Table-to-table entertainment perfect for weddings, corporate events, and private parties.
-🎭
-Stage Shows
-Full-scale productions and custom shows. Experience world-class illusion and entertainment.
-👵
-Senior Centers
-I have years of experience with senior citizens. I know what is needed to entertain and make them happy. I understand their interests and what makes them smile.
-🏫
-School Shows
-Engaging educational and entertainment magic shows for schools of all ages.
-🎉
-Private Events & Weddings
-Tailored magic for any special occasion. Corporate events, parties, and celebrations.
-Magic in Action
-Watch Travis perform • More on Instagram @emergencymagician
-Performance Reel
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full bg-black/90 backdrop-blur-md z-50 border-b border-amber-500/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-amber-500 rounded-full flex items-center justify-center text-black font-bold text-lg">EM</div>
+                <span class="text-xl sm:text-2xl font-bold heading tracking-tight">The Emergency Magician</span>
+            </div>
+            <div class="hidden md:flex gap-7 text-sm uppercase tracking-widest">
+                <a href="#about" class="hover:text-amber-400 transition">About</a>
+                <a href="#services" class="hover:text-amber-400 transition">Services</a>
+                <a href="#gallery" class="hover:text-amber-400 transition">Gallery</a>
+                <a href="#testimonials" class="hover:text-amber-400 transition">Testimonials</a>
+                <a href="#contact" class="hover:text-amber-400 transition">Contact</a>
+            </div>
+            <a href="#contact" class="bg-amber-500 hover:bg-amber-400 text-black px-5 py-2 rounded-full font-semibold text-sm transition">Book Now</a>
+        </div>
+    </nav>
 
-Full Performance
+    <!-- Hero Section -->
+    <section class="hero-gradient min-h-screen flex items-center justify-center pt-24 pb-16 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 30% 20%, #f59e0b 0%, transparent 40%), radial-gradient(circle at 70% 80%, #7c3aed 0%, transparent 40%);"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 relative z-10 w-full">
+            <div class="flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-10">
+                
+                <!-- Left Image -->
+                <div class="w-full max-w-xs lg:max-w-sm flex-shrink-0 order-2 lg:order-1">
+                    <img src="hero1.jpg" alt="Travis Martois - The Emergency Magician cosmic portrait" 
+                         class="w-full rounded-2xl shadow-2xl border-2 border-amber-500/40 object-cover aspect-square">
+                </div>
+                
+                <!-- Center Text -->
+                <div class="text-center flex-1 order-1 lg:order-2 max-w-xl">
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl heading font-bold mb-3 tracking-tighter text-white drop-shadow-lg">TRAVIS MARTOIS</h1>
+                    <p class="text-2xl sm:text-3xl md:text-4xl heading text-amber-400 mb-5">The Emergency Magician</p>
+                    <p class="text-base sm:text-lg max-w-lg mx-auto mb-6 text-zinc-200 leading-relaxed">
+                        Award-winning close-up magic &amp; stage illusions.<br class="hidden sm:block">
+                        Senior center shows • School shows • Corporate events • Weddings &amp; private shows
+                    </p>
+                    <p class="text-amber-300 font-medium mb-8 text-lg tracking-wide">MAGIC IS MEDICINE</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="#contact" class="bg-amber-500 hover:bg-amber-400 text-black px-8 py-3.5 rounded-full text-base font-semibold inline-block shadow-lg shadow-amber-500/20">Book Your Event</a>
+                        <a href="#gallery" class="border-2 border-amber-400 hover:bg-white/10 px-8 py-3.5 rounded-full text-base font-semibold inline-block">See Performances</a>
+                    </div>
+                </div>
+                
+                <!-- Right Image -->
+                <div class="w-full max-w-xs lg:max-w-sm flex-shrink-0 order-3">
+                    <img src="magic-castle.jpg" alt="Travis Martois at the Magic Castle" 
+                         class="w-full rounded-2xl shadow-2xl border-2 border-amber-500/40 object-cover aspect-square">
+                </div>
+                
+            </div>
+        </div>
+    </section>
 
-Live Performances
-￼ ￼ ￼ ￼ ￼ ￼ ￼ ￼ ￼ ￼ ￼ ￼ ￼ ￼
-What Clients Say
-“Travis’s performance was the highlight of our evening! His magic left everyone in awe and talking about it for days.”
-— Jessica L.
-Make Your Event Unforgettable
-Ready to bring magic to your next event? Let’s talk!
+    <!-- About Section -->
+    <section id="about" class="py-20 md:py-28 bg-zinc-900">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-5xl heading font-bold mb-10">Who Is The Emergency Magician?</h2>
+            <div class="space-y-6 text-lg text-zinc-300 leading-relaxed max-w-3xl mx-auto">
+                <p>Travis Martois is a proud member of The Academy of Magical Arts at the World Famous Magic Castle in Hollywood and The Magic Circle in London. He has been a Featured performer in the Close-Up Gallery at the Magic Castle.</p>
+                <p>By day, he is a Physician Assistant with over 35 years in emergency medicine — starting as an EMT at age 19. By night, he brings magic that heals the soul.</p>
+                <p class="text-amber-400 font-semibold text-2xl mt-8">MAGIC IS MEDICINE.</p>
+            </div>
+        </div>
+    </section>
 
+    <!-- Services Section -->
+    <section id="services" class="py-20 md:py-28">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl heading font-bold text-center mb-6">Magical Experiences</h2>
+            <p class="text-center text-zinc-400 mb-16 max-w-2xl mx-auto">From intimate close-up magic to full stage productions — tailored for every audience.</p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
+                <div class="bg-zinc-900 p-8 rounded-3xl card-hover border border-amber-500/20">
+                    <div class="text-4xl mb-5">🔍</div>
+                    <h3 class="text-2xl heading mb-3">Close-Up Magic</h3>
+                    <p class="text-zinc-400 leading-relaxed">Intimate magic inches from your guests. Bring the Magic Castle experience right to your table.</p>
+                </div>
+                <div class="bg-zinc-900 p-8 rounded-3xl card-hover border border-amber-500/20">
+                    <div class="text-4xl mb-5">🚶</div>
+                    <h3 class="text-2xl heading mb-3">Strolling Magic</h3>
+                    <p class="text-zinc-400 leading-relaxed">Table-to-table entertainment perfect for weddings, corporate events, and private parties.</p>
+                </div>
+                <div class="bg-zinc-900 p-8 rounded-3xl card-hover border border-amber-500/20">
+                    <div class="text-4xl mb-5">🎭</div>
+                    <h3 class="text-2xl heading mb-3">Stage Shows</h3>
+                    <p class="text-zinc-400 leading-relaxed">Full-scale productions and custom shows. Experience world-class illusion and entertainment.</p>
+                </div>
+                <div class="bg-zinc-900 p-8 rounded-3xl card-hover border border-amber-500/20">
+                    <div class="text-4xl mb-5">👵</div>
+                    <h3 class="text-2xl heading mb-3">Senior Centers</h3>
+                    <p class="text-zinc-400 leading-relaxed">I have years of experience with senior citizens. I know what is needed to entertain and make them happy. I understand their interests and what makes them smile.</p>
+                </div>
+                <div class="bg-zinc-900 p-8 rounded-3xl card-hover border border-amber-500/20">
+                    <div class="text-4xl mb-5">🏫</div>
+                    <h3 class="text-2xl heading mb-3">School Shows</h3>
+                    <p class="text-zinc-400 leading-relaxed">Engaging educational and entertainment magic shows for schools of all ages.</p>
+                </div>
+                <div class="bg-zinc-900 p-8 rounded-3xl card-hover border border-amber-500/20">
+                    <div class="text-4xl mb-5">🎉</div>
+                    <h3 class="text-2xl heading mb-3">Private Events &amp; Weddings</h3>
+                    <p class="text-zinc-400 leading-relaxed">Tailored magic for any special occasion. Corporate events, parties, and celebrations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Gallery / Videos Section -->
+    <section id="gallery" class="py-20 md:py-28 bg-zinc-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl heading font-bold text-center mb-6">Magic in Action</h2>
+            <p class="text-center text-amber-400 mb-12">Watch Travis perform • More on Instagram @emergencymagician</p>
+            
+            <!-- Videos -->
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
+                <div>
+                    <h3 class="text-xl heading mb-4 text-center text-amber-300">Performance Reel</h3>
+                    <div class="video-container border border-amber-500/20 shadow-xl">
+                        <iframe src="https://www.youtube.com/embed/i6qcdF50jA0" 
+                                title="Travis Martois Performance Reel" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen
+                                referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl heading mb-4 text-center text-amber-300">Full Performance</h3>
+                    <div class="video-container border border-amber-500/20 shadow-xl">
+                        <iframe src="https://www.youtube.com/embed/0cPmkiXV0VY" 
+                                title="Travis Martois Full Performance" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen
+                                referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Photo Gallery -->
+            <h3 class="text-2xl heading text-center text-amber-300 mb-8">Live Performances</h3>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <img src="gallery1.jpg" alt="Senior center magic show" class="w-full h-48 object-cover rounded-xl border border-amber-500/20 shadow-lg hover:scale-105 transition duration-300">
+                <img src="gallery2.jpg" alt="Close-up magic at Magic Castle" class="w-full h-48 object-cover rounded-xl border border-amber-500/20 shadow-lg hover:scale-105 transition duration-300">
+                <img src="gallery3.jpg" alt="Card magic performance" class="w-full h-48 object-cover rounded-xl border border-amber-500/20 shadow-lg hover:scale-105 transition duration-300">
+                <img src="gallery4.jpg" alt="Stage show in lab coat" class="w-full h-48 object-cover rounded-xl border border-amber-500/20 shadow-lg hover:scale-105 transition duration-300">
+                <img src="gallery5.jpg" alt="Stage performance" class="w-full h-48 object-cover rounded-xl border border-amber-500/20 shadow-lg hover:scale-105 transition duration-300">
+                <img src="gallery6.jpg" alt="Doctor magic - four aces" class="w-full h-48 object-cover rounded-xl border border-amber-500/20 shadow-lg hover:scale-105 transition duration-300">
+                <img src="gallery7.jpg" alt="At The Magic Circle London" class="w-full h-48 object-cover rounded-xl border border-amber-500/20 shadow-lg hover:scale-105 transition duration-300">
+                <img src="gallery8.jpg" alt="Outdoor close-up magic" class="w-full h-48 object-cover rounded-xl border border-amber-500/20 shadow-lg hover:scale-105 transition duration-300">
+                <img src="gallery9.jpg" alt="Magic Meets Food booth" class="w-full h-48 object-cover rounded-xl border border-amber-500/20 shadow-lg hover:scale-105 transition duration-300">
+                <img src="gallery10.jpg" alt="Magic booth setup" class="w-full h-48 object-cover rounded-xl border border-amber-500/20 shadow-lg hover:scale-105 transition duration-300">
+                <img src="gallery11.jpg" alt="Magic Castle portrait" class="w-full h-48 object-cover rounded-xl border border-amber-500/20 shadow-lg hover:scale-105 transition duration-300">
+                <img src="gallery12.jpg" alt="Newspaper magic trick" class="w-full h-48 object-cover rounded-xl border border-amber-500/20 shadow-lg hover:scale-105 transition duration-300">
+                <img src="gallery13.jpg" alt="Senior center performance" class="w-full h-48 object-cover rounded-xl border border-amber-500/20 shadow-lg hover:scale-105 transition duration-300">
+                <img src="gallery14.jpg" alt="Interacting with seniors" class="w-full h-48 object-cover rounded-xl border border-amber-500/20 shadow-lg hover:scale-105 transition duration-300">
+            </div>
+        </div>
+    </section>
 
-Send Inquiry – I’ll Reply Within 24 Hours
-info@emergencymagician.com (951) 236-6282 @emergencymagician
-© 2026 The Emergency Magician • Travis Martois • All Rights Reserved
-Member of The Magic Castle (Academy of Magical Arts) & The Magic Circle
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-20 md:py-28">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-5xl heading font-bold mb-16">What Clients Say</h2>
+            <div class="bg-zinc-900 p-10 md:p-12 rounded-3xl border border-amber-500/20">
+                <p class="italic text-xl md:text-2xl text-zinc-200 leading-relaxed mb-8">
+                    “Travis’s performance was the highlight of our evening! His magic left everyone in awe and talking about it for days.”
+                </p>
+                <p class="text-amber-400 font-medium text-lg">— Jessica L.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 md:py-28 bg-black">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-5xl heading font-bold mb-6">Make Your Event Unforgettable</h2>
+            <p class="text-xl mb-12 text-zinc-300">Ready to bring magic to your next event? Let’s talk!</p>
+            
+            <div class="bg-zinc-900 rounded-3xl p-8 md:p-12 mb-12 border border-zinc-800">
+                <form action="https://formsubmit.co/info@emergencymagician.com" method="POST" class="space-y-5 text-left">
+                    <input type="hidden" name="_subject" value="New Booking Inquiry – The Emergency Magician">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="https://emergencymagician.com/#contact">
+                    
+                    <div>
+                        <input type="text" name="name" placeholder="Your Name" required 
+                               class="w-full bg-zinc-800 border border-zinc-700 rounded-xl px-6 py-4 focus:outline-none focus:border-amber-400 transition">
+                    </div>
+                    <div>
+                        <input type="email" name="email" placeholder="Email Address" required 
+                               class="w-full bg-zinc-800 border border-zinc-700 rounded-xl px-6 py-4 focus:outline-none focus:border-amber-400 transition">
+                    </div>
+                    <div>
+                        <input type="tel" name="phone" placeholder="Phone Number" 
+                               class="w-full bg-zinc-800 border border-zinc-700 rounded-xl px-6 py-4 focus:outline-none focus:border-amber-400 transition">
+                    </div>
+                    <div>
+                        <textarea name="message" placeholder="Event details (date, type of event, location, number of guests, etc.)" rows="5" required
+                                  class="w-full bg-zinc-800 border border-zinc-700 rounded-xl px-6 py-4 focus:outline-none focus:border-amber-400 transition"></textarea>
+                    </div>
+                    <button type="submit" 
+                            class="w-full bg-amber-500 hover:bg-amber-400 text-black py-5 rounded-2xl font-bold text-lg transition shadow-lg">
+                        Send Inquiry – I’ll Reply Within 24 Hours
+                    </button>
+                </form>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row gap-6 sm:gap-10 justify-center items-center text-lg">
+                <a href="mailto:info@emergencymagician.com" class="flex items-center gap-3 hover:text-amber-400 transition">
+                    <i class="fa-solid fa-envelope text-2xl text-amber-400"></i>
+                    <span>info@emergencymagician.com</span>
+                </a>
+                <a href="tel:+19512366282" class="flex items-center gap-3 hover:text-amber-400 transition">
+                    <i class="fa-solid fa-phone text-2xl text-amber-400"></i>
+                    <span>(951) 236-6282</span>
+                </a>
+                <a href="https://www.instagram.com/emergencymagician/" target="_blank" rel="noopener" class="flex items-center gap-3 hover:text-amber-400 transition">
+                    <i class="fa-brands fa-instagram text-3xl text-amber-400"></i>
+                    <span>@emergencymagician</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-10 border-t border-zinc-800 text-center text-sm text-zinc-500">
+        <p class="mb-2">&copy; 2026 The Emergency Magician • Travis Martois • All Rights Reserved</p>
+        <p>Member of The Magic Castle (Academy of Magical Arts) &amp; The Magic Circle</p>
+    </footer>
+
+</body>
+</html>
